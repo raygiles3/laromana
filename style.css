@@ -1,4 +1,4 @@
-/* Global Styles */
+/* General Layout */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -41,6 +41,9 @@ nav a {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
 }
 
 /* Hero Section */
@@ -58,10 +61,6 @@ nav a {
 .hero h1 {
   color: #ffa500;
   font-size: 2.2rem;
-}
-
-.hero h2 {
-  font-weight: normal;
 }
 
 .hero-buttons button {
@@ -102,6 +101,22 @@ nav a {
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.feature img {
+  margin-bottom: 0.5rem;
+}
+
+.feature h3 {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+a.feature {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 /* Campaign Section */
@@ -169,16 +184,106 @@ nav a {
   max-width: 500px;
 }
 
-/* Footer */
-footer {
+/* Form Section */
+.form-section {
+  padding: 3rem 2rem;
   text-align: center;
-  padding: 1rem;
-  background: #eaeaea;
-  font-size: 0.9rem;
+  background-color: #f5f5f5;
 }
 
-/* Responsive Design */
+.form-section form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-section input,
+.form-section textarea,
+.form-section select {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-section button {
+  width: 100%;
+  background-color: #1877f2;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background-color: #0c0e12;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 1rem;
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+  color: #aaa;
+}
+
+.footer-section ul li a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+  padding-top: 1rem;
+  border-top: 1px solid #222;
+  width: 100%;
+}
+
+.footer-icons a {
+  margin-right: 10px;
+  color: #aaa;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+  .features-grid, .campaign-grid {
+    grid-template-columns: 1fr;
+  }
+
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -196,17 +301,8 @@ footer {
     font-size: 1.75rem;
   }
 
-  .pricing-box {
+  .pricing-box,
+  .form-section form {
     padding: 1.5rem 1rem;
-  }
-
-  .hero-buttons button,
-  .btn-primary {
-    width: 100%;
-    margin: 0.5rem 0;
-  }
-
-  .features-grid, .campaign-grid {
-    grid-template-columns: 1fr;
   }
 }

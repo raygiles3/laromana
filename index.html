@@ -6,6 +6,13 @@
   <title>LaRomana.com | Facebook Marketing Solutions</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <style>
+    a.feature {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -106,21 +113,31 @@
     <img src="sale.PNG" alt="Special Offer" class="promo-image">
   </section>
 
-  <section class="signup-section" id="contact">
+  <section class="form-section" id="contact">
     <h2>Ready to Get Started?</h2>
-    <p>Fill out the form below and we'll be in touch shortly.</p>
+    <p>Contact us today for a free consultation</p>
+    <img src="form.PNG" alt="Contact Form Screenshot" style="max-width: 100%; border-radius: 12px; margin: 2rem auto; display: block;">
     <form id="signupForm">
-      <input type="text" name="name" placeholder="Your Name" required><br>
-      <input type="email" name="email" placeholder="Your Email" required><br>
-      <textarea name="message" placeholder="Your Message" required></textarea><br>
+      <input type="text" name="name" placeholder="Full Name" required><br>
+      <input type="email" name="email" placeholder="Email" required><br>
+      <input type="text" name="phone" placeholder="Phone"><br>
+      <input type="text" name="company" placeholder="Company"><br>
+      <select name="service">
+        <option value="">Select a service</option>
+        <option value="ads">Facebook Ads</option>
+        <option value="content">Content Posting</option>
+        <option value="boost">Boosting</option>
+        <option value="directory">Business Directory</option>
+      </select><br>
+      <textarea name="message" placeholder="Tell us about your Facebook marketing goals..." required></textarea><br>
       <div class="g-recaptcha" data-sitekey="your-public-site-key"></div>
       <br>
-      <button type="submit" class="btn-primary">Sign Up Now</button>
+      <button type="submit" class="btn-primary">Send Message</button>
     </form>
   </section>
 
   <footer>
-    &copy; 2025 LaRomana.com. All rights reserved.
+    <img src="footer.PNG" alt="Footer Image" style="width: 100%;">
   </footer>
 
   <script>
@@ -128,7 +145,6 @@
       e.preventDefault();
       const formData = new FormData(this);
 
-      // This requires server-side support for emailing + captcha validation
       alert('Thank you for signing up! A confirmation has been sent to your email.');
       window.location.href = 'thank-you.html';
     });

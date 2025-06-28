@@ -4,120 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LaRomana.com | Facebook Marketing Solutions</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #000;
-    }
-
-    header {
-      background: #fff;
-      border-bottom: 1px solid #eaeaea;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-    }
-
-    .btn-primary {
-      background-color: #1877f2;
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .hero {
-      background-color: #0047ab;
-      color: white;
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-
-    .hero img {
-      width: 100px;
-    }
-
-    .hero h1 {
-      color: #ffa500;
-      font-size: 2rem;
-    }
-
-    .hero-buttons button {
-      margin: 1rem;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .hero-buttons .start {
-      background-color: #ffd700;
-      color: #000;
-    }
-
-    .hero-buttons .learn {
-      background-color: #fcd303;
-      color: #000;
-    }
-
-    .features-section {
-      padding: 2rem;
-      background: #f5f7fa;
-      text-align: center;
-    }
-
-    .features-grid, .campaign-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .feature {
-      background: white;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .campaign-section {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .campaign-section button {
-      background-color: #fcd303;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #eaeaea;
-      font-size: 0.9rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div style="display: flex; align-items: center;">
-      <img src="LAROMANA.png" alt="LaRomana Logo" style="height: 40px; margin-right: 10px;">
+    <div class="header-logo">
+      <img src="LAROMANA.png" alt="LaRomana Logo">
       <strong>LaRomana.com</strong>
     </div>
     <nav>
@@ -129,7 +21,7 @@
   </header>
 
   <section class="hero">
-    <img src="LAROMANA.png" alt="LaRomana Logo" />
+    <img src="LAROMANA.png" alt="LaRomana Logo" class="hero-logo" />
     <h1>LaRomana.com</h1>
     <h2>Professional Facebook Marketing Solutions</h2>
     <p>Boost your business with our comprehensive Facebook advertising and posting services. Access our exclusive Business Database and watch your reach grow exponentially.</p>
@@ -166,7 +58,7 @@
     <h2>Start Your Campaign Today</h2>
     <p>Join hundreds of businesses in La Romana who are growing their reach with our Facebook advertising platform.</p>
     <button>Access Business Database</button>
-    <div class="campaign-grid" style="margin-top: 2rem;">
+    <div class="campaign-grid">
       <div class="feature">
         <h3>Target Your Audience</h3>
         <p>Reach customers in La Romana and the Eastern Region with precision targeting.</p>
@@ -180,6 +72,33 @@
         <p>Help customers find your business with our search and location features.</p>
       </div>
     </div>
+  </section>
+
+  <section class="pricing-section" id="pricing">
+    <h2>Simple, Transparent Pricing</h2>
+    <p>Everything you need to succeed on Facebook</p>
+    <div class="pricing-box">
+      <div class="badge">⭐ Most Popular</div>
+      <h3>Professional Package</h3>
+      <h1><span class="price-highlight">$2,500</span> RD Pesos/month</h1>
+      <p>Complete Facebook marketing solution for your business</p>
+      <ul class="features-list">
+        <li>✔ Facebook Ad Placement</li>
+        <li>✔ Professional Content Posting</li>
+        <li>✔ Business Database Access</li>
+        <li>✔ Monthly Analytics Report</li>
+        <li>✔ 24/7 Customer Support</li>
+        <li>✔ Campaign Optimization</li>
+      </ul>
+      <p><strong>Available Add-ons:</strong></p>
+      <ul class="addons">
+        <li>☐ Post Boosting Services</li>
+        <li>☐ Premium Analytics</li>
+        <li>☐ Custom Content Creation</li>
+      </ul>
+      <button class="btn-primary">Start Your Campaign</button>
+    </div>
+    <img src="sale.PNG" alt="Special Offer" class="promo-image">
   </section>
 
   <footer>
